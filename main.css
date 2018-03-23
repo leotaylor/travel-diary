@@ -13,11 +13,32 @@
     text-align: center;
 }
 
-.card-button {
+.go-Button {
     margin: 0 auto;
 }
 
 .anImage {
     max-width: 90%;
     height: 200px;
+    border-radius: 50%;
+}
+
+.textInput {
+    width: 250px;
+    height: 65px;
+}
+
+
+#outputContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    border: 5px solid red;
+    height: 1000px;
+}
+#outputCard {
+    height: 100px;
+    width: 95%;
+    border: 5px solid black;
 }
