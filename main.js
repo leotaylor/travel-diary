@@ -1,7 +1,7 @@
-const vacationArray = [
+const vacation = [
     {
-        title: "Bahama",
-        imageUrl: "https://media.palladiumhotelgroup.com/kTCKtz6LFBOD-X5_4ilIzQ40sZo=/1280x768/smart/weddings2015/carouselcard/None_jamaica.jpg",
+        title: "Amazon",
+        imageUrl: "http://foundtheworld.com/wp-content/uploads/2015/12/Amazon-Rainforest-11.jpg",
         description: "by the sea"
     },
     {
@@ -30,3 +30,23 @@ const vacationArray = [
         description: "Ski Trip",
     }
 ];
+
+const printToDom = (domString, divId) => {
+    const printTo = document.getElementById(divId);
+    printTo.innerHTML = domString;
+};
+
+const buildDomString = (vacationArray) => {
+    let domString = '';
+    vacationArray.forEach((destination) => {
+        domString += `<div class="card">`;
+       domString +=     `<h1>${destination.title}</h1>`;
+       domString +=     `<img class="anImage" src="${destination.imageUrl}" alt="">`;
+       domString +=     `<h3>${destination.description}</h3>`;
+       domString +=     `<button class="card-button">Let's Go</button>`;
+       domString +=  `</div>`;
+    });
+    printToDom(domString, 'card-holder');
+}
+
+buildDomString(vacation);

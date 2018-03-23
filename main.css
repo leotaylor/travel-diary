@@ -1,14 +1,14 @@
 
-/* #card-holder {
+#card-holder {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-} */
+}
 
 .card {
     margin: 1%;
     padding: 2%;
-    width: 400px;
+    width: 300px;
     border: 2px solid slategray;
     text-align: center;
 }
@@ -17,3 +17,7 @@
     margin: 0 auto;
 }
 
+.anImage {
+    max-width: 90%;
+    height: 200px;
+}
