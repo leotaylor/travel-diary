@@ -33,14 +33,14 @@ const vacation = [
 // PRINT TO DOM FUNCTION ------------------------------------------------------
 const printToDom = (domString, divId) => {
     const printTo = document.getElementById(divId);
-    printTo.innerHTML = domString;
+    printTo.innerHTML += domString;
 };
 
 // BUILDING CARDS ---------------------------------------------------------------
 const buildDomString = (vacationArray) => {
     let domString = '';
     vacationArray.forEach((destination) => {
-        domString += `<div class="card">`;
+       domString += `<div class="card">`;
        domString +=     `<h1>${destination.title}</h1>`;
        domString +=     `<img class="anImage" src="${destination.imageUrl}" alt="">`;
        domString +=     `<h3>${destination.description}</h3>`;
@@ -54,15 +54,17 @@ buildDomString(vacation);
 
 // EVENT LISTENER --------------------------------------------------------------
 const inputBox = document.getElementsByClassName("textInput");
-const outputBox = document.getElementById("outputCard");
+// const outputBox = document.getElementById("outputCard");
 const buttons = document.getElementsByClassName("go-Button");
 
+// OUTPUT BOX-----------------------------------------------------------------
 for (let i = 0; i < buttons.length; i++){
     buttons[i].addEventListener('click', (event) => {
         let userInput = inputBox[i].value;
         let domOutput = '';
-        domOutput = userInput;
-        outputBox.innerHTML = domOutput;
-        printToDom(domOutput, 'outputCard');
+        domOutput += `<div id="outputCard">`;
+        domOutput += `<p>${userInput}</p>`;
+        domOutput += `</div>`;
+        printToDom(domOutput, 'outputContainer');
     });
 };
