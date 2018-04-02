@@ -11,6 +11,7 @@
     width: 300px;
     border: 2px solid slategray;
     text-align: center;
+    background-color: cornsilk;
 }
 
 .go-Button {
@@ -43,4 +44,8 @@
     border: 5px solid black;
     text-align: center;
     background-color: cornsilk;
+}
+
+.purple {
+    background-color: purple;
 }

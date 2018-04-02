@@ -49,6 +49,7 @@ const buildDomString = (vacationArray) => {
        domString +=  `</div>`;
     });
     printToDom(domString, 'card-holder');
+    
 };
 buildDomString(vacation);
 
@@ -68,3 +69,4 @@ for (let i = 0; i < buttons.length; i++){
         printToDom(domOutput, 'outputContainer');
     });
 };
+
