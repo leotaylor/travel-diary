@@ -2,6 +2,7 @@
 ## Description 
 Created 6 Travel Destination with a textbox to record a travel diary for given destination. And then print the input into an output box below. 
 ## Screenshot
+![](https://raw.githubusercontent.com/leotaylor/travel-diary/master/snaps/traveldiary.png)
 
 ## Learning Objective/Tech Used
 - event listeners
